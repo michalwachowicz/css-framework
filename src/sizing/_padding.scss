@@ -1,0 +1,31 @@
+@each $size-class in $size-classes {
+  $size: $size-class * 0.25rem;
+
+  .p-#{$size-class} {
+    padding: $size;
+  }
+
+  .px-#{$size-class} {
+    padding: 0 $size;
+  }
+
+  .py-#{$size-class} {
+    padding: $size 0;
+  }
+
+  .pt-#{$size-class} {
+    padding-top: $size;
+  }
+
+  .pr-#{$size-class} {
+    padding-right: $size;
+  }
+
+  .pb-#{$size-class} {
+    padding-bottom: $size;
+  }
+
+  .pl-#{$size-class} {
+    padding-left: $size;
+  }
+}

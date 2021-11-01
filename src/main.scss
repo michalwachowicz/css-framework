@@ -6,5 +6,7 @@ body {
   @include font-size();
 }
 
-@import './margin_padding';
+@import './sizing/size_classes';
+@import './sizing/margin', './sizing/padding';
+@import './sizing/width', './sizing/height';
 @import './grid';

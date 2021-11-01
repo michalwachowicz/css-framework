@@ -1,0 +1,31 @@
+@each $size-class in $size-classes {
+  $size: $size-class * 0.25rem;
+
+  .m-#{$size-class} {
+    margin: $size;
+  }
+
+  .mx-#{$size-class} {
+    margin: 0 $size;
+  }
+
+  .my-#{$size-class} {
+    margin: $size 0;
+  }
+
+  .mt-#{$size-class} {
+    margin-top: $size;
+  }
+
+  .mr-#{$size-class} {
+    margin-right: $size;
+  }
+
+  .mb-#{$size-class} {
+    margin-bottom: $size;
+  }
+
+  .ml-#{$size-class} {
+    margin-left: $size;
+  }
+}

@@ -1,0 +1,7 @@
+@each $size-class in $size-classes {
+  $size: $size-class * 0.25rem;
+
+  .h-#{$size-class} {
+    height: $size;
+  }
+}
