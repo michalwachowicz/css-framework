@@ -1,0 +1,9 @@
+@import './reset';
+@import './fonts';
+
+body {
+  @include font($type: sans-serif, $weight: 400);
+  @include font-size();
+}
+
+@import './grid';

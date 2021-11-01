@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Merriweather:wght@300;400;700;900&family=Source+Code+Pro:wght@300;400;700;900&display=swap');
+
+$font-families: (
+  sans-serif: 'Inter',
+  serif: 'Merriweather',
+  monospace: 'Source Code Pro',
+);
+
+$font-sizes: (
+  'xs': (
+    0.75rem,
+    1rem,
+  ),
+  'sm': (
+    0.875rem,
+    1.25rem,
+  ),
+  'base': (
+    1rem,
+    1.5rem,
+  ),
+  'lg': (
+    1.125rem,
+    1.75rem,
+  ),
+  'xl': (
+    1.25rem,
+    2rem,
+  ),
+  '2xl': (
+    1.5rem,
+    2rem,
+  ),
+  '3xl': (
+    1.875rem,
+    2.25rem,
+  ),
+  '4xl': (
+    2.25rem,
+    2.5rem,
+  ),
+  '5xl': (
+    1rem,
+    1,
+  ),
+);
+
+$font-weights: 300, 400, 700, 900;
+
+@mixin font($type: null, $weight: null) {
+  font-family: map-get($map: $font-families, $key: $type), $type;
+  font-weight: $weight;
+}
+
+@mixin font-size($size-class: 'base') {
+  $size: map-get($font-sizes, $size-class);
+
+  font-size: nth($size, 1);
+  line-height: nth($size, 2);
+}
+
+@each $type, $family in $font-families {
+  .font-#{$type} {
+    @include font($type: $type);
+  }
+}
+
+@each $weight in $font-weights {
+  .font-w-#{$weight} {
+    @include font($weight: $weight);
+  }
+}
+
+@each $size, $sizes in $font-sizes {
+  .font-s-#{$size} {
+    @include font-size($size);
+  }
+}

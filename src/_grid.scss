@@ -1,0 +1,15 @@
+.d-grid {
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(12, 1fr);
+
+  & > * {
+    grid-column: span 12;
+  }
+}
+
+@for $i from 1 through 12 {
+  .grid-#{$i} {
+    grid-column: span $i;
+  }
+}
